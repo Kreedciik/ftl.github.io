@@ -31,7 +31,7 @@ const changeOptionName = (element, optionName) => {
         item.addEventListener('click', e => {
             e.preventDefault();
             item.parentNode.parentNode.previousElementSibling.textContent = item.textContent;
-            item.parentNode.parentNode.previousElementSibling.classList.toggle('disable-name');
+            item.parentNode.parentNode.previousElementSibling.classList.remove('disable-name');
           
         });
     });
