@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>FTL: Прямая машина</title>
+</head>
+<body>
+<section class="main">
+    <div class="container">
+        <div class="main__container">
+            <h1 class="main__heading">FTL: Прямая машина</h1>
+            <!-- Route -->
+            <div class="main__route route main__section">
+                <div class="naming">
+                    <span class="number">1</span>
+                     <h3 class="main-title">Маршрут</h3>
+                </div>
+                <div class="route__direction">
+                    <div class="label-block">
+                        <label for="from" class="label">Откуда</label>
+                    </div>
+                    <input type="text" class="route-input" name="" id="from">
+                </div>
+                <div class="route__direction">
+                    <div class="label-block">
+                        <label for="to" class="label">Куда</label>
+                    </div>
+                    <input type="text" class="route-input" name="" id="to">
+                </div>
+            </div>
+            <!-- Transport -->
+            <div class="main__route transport main__section small-section">
+                <div class="naming">
+                    <span class="number">2</span>
+                     <h3 class="main-title">Транспорт</h3>
+                </div>  
+                <div class="transport__category">
+                    <div class="transport__lifting">
+                        <div class="label-block">
+                            <label for="" class="label">Грузоподъёмность</label>
+                        </div>
+                        <div data-option class="option small-option">
+                            <div class="option__name">
+                                <!-- <img src="./img/arrow.png" alt="Arrow"> -->
+                                <span class="name disable-name">Не выбрано</span>
+                                <ul class="option__list disable lifting">
+                                    <li class="option__list-item"><a href="#">Вариант 1</a></li>
+                                    <li class="option__list-item"><a href="#">Вариант 2</a></li>
+                                    <li class="option__list-item"><a href="#">Вариант 3</a></li>
+                                    <li class="option__list-item"><a href="#">Вариант 4</a></li>
+                                    <li class="option__list-item"><a href="#">Вариант 5</a></li>
+                                </ul>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                    <div class="transport__method">
+                        <div class="label-block">
+                            <label for="" class="label">Способ погрузки</label>
+                        </div>
+                        <div data-option class="option small-option">
+                            <div class="option__name">
+                                <!-- <img src="./img/arrow.png" alt="Arrow"> -->
+                                <span class="name disable-name">Не выбрано</span>
+                                <ul class="option__list disable lifting">
+                                    <li class="option__list-item"><a href="#">Задняя</a></li>
+                                    <li class="option__list-item"><a href="#">Передняя</a></li>
+                                    <li class="option__list-item"><a href="#">Боковая</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Lifting -->
+            <div class="main__route lifting main__section small-section">
+                <div class="naming">
+                    <span class="number">3</span>
+                     <h3 class="main-title">Груз</h3>
+                </div> 
+                <div class="label-block">
+                    <label for="" class="label">Тип груза</label>
+                </div>
+                <div data-option class="option">
+                    <div class="option__name">
+                        <!-- <img src="./img/arrow.png" alt="Arrow"> -->
+                        <span class="name disable-name">Не выбран</span>
+                        
+                        <ul class="option__list disable lifting">
+                            <li class="option__list-item"><a href="#">Тип 1</a></li>
+                            <li class="option__list-item"><a href="#">Тип 2</a></li>
+                            <li class="option__list-item"><a href="#">Тип 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lifting__class class">
+                    <div class="class__danger">
+                        <div class="label-block">
+                            <label for="" class="label">Класс опасности</label>
+                        </div>
+                        <div data-option class="option small-option">
+                            <div class="option__name">
+                                <!-- <img src="./img/arrow.png" alt="Arrow"> -->
+                                <span class="name disable-name">Не выбрано</span>
+                                
+                                <ul class="option__list disable lifting">
+                                    <li class="option__list-item"><a href="#">Класс 5 — Окисляющие вещества и органические перекиси</a></li>
+                                    <li class="option__list-item"><a href="#">Класс 2</a></li>
+                                    <li class="option__list-item"><a href="#">Класс 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class__value">
+                        <div class="label-block">
+                            <label for="" class="label">Объявленная ценность &#x20bd</label>
+                        </div>
+                        <div class=" no-arrow small-option option__name disable-name">&#8805 1</div>
+                    </div>
+                </div>
+                <div class="lifting__checkbox checkbox small-section">
+                    <div class="check-temp">
+                        <input data-checkbox type="checkbox" class="checkbox custom-checkbox" name="" id="checkbox" />
+                        <div class="label-block checkbox-block">
+                            <label for="checkbox" class="label checkbox-label">Требуется температурный режим</label>
+                        </div>
+                    </div>
+                    <div class="temperatureMode">
+                        <div class="temperatureMode__left small-option">
+                            <div class="label-block">
+                                <label for="temp-start" class="label">От, &#176;С</label>
+                            </div>
+                            <input id="temp-start" type="text" class="temp-mode small-option" value="-20">
+                        </div>
+                        <div class="temperatureMode__right small-option">
+                            <div class="label-block">
+                                <label for="temp-finish" class="label">До, &#176;С</label>
+                            </div>
+                            <input id="temp-finish" type="text" class="temp-mode small-option" value="+23">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Time -->
+            <div class="main__time time main__section">
+                <div class="naming">
+                    <span class="number">4</span>
+                     <h3 class="main-title">Время</h3>
+                </div> 
+                <div class="address">
+                    <div class="address__title">
+                        <div class="label-block">
+                            <label for="checkbox" class="label">Когда прибыть на точку</label>
+                        </div>
+                        <div class="label-block">
+                            <label for="checkbox" class="label">700 км в день</label>
+                        </div>
+                    </div>
+                    <div class="address__choice">
+                        <div class="address__check">
+                            <div class="circle"></div>
+                            <span class="adress__title">Адрес не указан</span>
+                        </div>
+                        <button class="choice">НЕ ВЫБРАНО</button>
+                    </div>
+                    <div class="address__choice">
+                        <div class="address__check">
+                            <div class="circle disable-circle"></div>
+                            <span class="adress__title">Адрес не указан</span>
+                        </div>
+                        <button class="choice">НЕ ВЫБРАНО</button>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="label-block">
+                        <label for="area" class="label">Комментарий к заказу</label>
+                        
+                    </div>
+                    <textarea name="" id="area" class="comment__area" placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+                </div>
+                <div class="popup">
+                    <p class="popup__text">Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <div class="naming">
+    <span class="number">1</span>
+     <h3 class="main-title">Marshrut</h3>
+</div>
+
+<div class="label-block">
+    <label for="#" class="label">From</label>
+</div>
+<h2>Hello</h2> -->
+<script src="./js/main.js"></script>
+</body>
+</html>
